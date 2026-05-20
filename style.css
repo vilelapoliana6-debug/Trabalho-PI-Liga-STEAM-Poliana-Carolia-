@@ -1,0 +1,177 @@
+/* ===== RESET BÁSICO — não precisa mexer ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte do texto (se a primeira não existir, tenta a próxima) */
+  line-height: 1.6; 
+  background-color: #f9f9f9; /* Define a cor de fundo da página (um cinza bem claro) */
+  color: #333;
+}
+
+/* ===== Modificado para dar maior impacto no meu trabalho ===== */
+
+header {
+  background: linear-gradient(135deg, #3b3b3b 0%, #1a1a1a 100%); /* Gradiente tom Industrial */
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  border-bottom: 10px solid #ff3b00; /* Laranja ArcelorMittal */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3.5rem; /* Define um tamanho de letra bem grande para o título principal */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 8px rgba(0,0,0,0.5); /* Sombra no texto */
+  line-height: 1.1;
+}
+
+header p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #cccccc;
+  letter-spacing: 0.5px;
+}
+
+/* Centraliza o conteúdo na tela e limita a largura máxima para facilitar a leitura */
+main {
+  max-width: 850px; /* Largura ideal para leitura */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Ajusta a foto para ocupar a tela toda, fixa a altura e arredonda os cantos */
+img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do elemento pai (main) */
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px; /* Arredonda os cantos da imagem */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+}
+
+/* Caixa branca com uma borda grossa laranja no lado esquerdo */
+.destaque {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 10px solid #ff3b00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 50px;
+}
+
+/* Título interno do bloco de destaque (cor cinza escuro) */
+.destaque h2 {
+  color: #3b3b3b;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Título das outras seções (cor laranja) */
+section h2 {
+  color: #ff3b00;
+  margin-bottom: 15px;
+}
+
+/* Tag de Lista: Organiza o grupo de itens e empurra o conteúdo de baixo */
+ul {
+  list-style-position: inside;
+  margin-bottom: 30px;
+}
+
+/* Itens da Lista: Linhas individuais com um espaçamento e um tracejado embaixo */
+li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+/* Fundo cinza claro no final da página com texto centralizado */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  background: #eee;
+  margin-top: 50px;
+}
+
+/* ===== CARDS DE IMPACTO — ESTILO ADICIONAL ===== */
+
+.impacto-numeros {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.card {
+  background: #3b3b3b; /* Cinza Industrial igual ao header */
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  border-bottom: 5px solid #ff3b00; /* Laranja ArcelorMittal */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* O card sobe levemente */
+}
+
+.card h3 {
+  font-size: 3rem;
+  color: #ff3b00;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Efeito de Animação ao carregar a página */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Aplica o efeito de surgir suavemente (fadeIn) assim que a página carrega */
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Transforma um link comum em um botão laranja arredondado */
+.btn-saiba-mais {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ff3b00;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(255, 59, 0, 0.3);
+}
+
+.btn-saiba-mais:hover { /* Muda o botão para cinza e aumenta ele de tamanho ao passar o mouse */
+  background-color: #3b3b3b;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Melhora nos Cards (Efeito de Vidro) */
+.card {
+  backdrop-filter: blur(5px);
+  background: rgba(59, 59, 59, 0.95) !important;
+}
