@@ -312,3 +312,21 @@ footer strong { color: #2b2b2b; }
     text-align: center !important;
   }
 }
+/* ===== CORREÇÃO DE INTERATIVIDADE DO FAQ ===== */
+details {
+  display: block !important;
+  width: 100%_ !important;
+}
+
+summary {
+  display: list-item !important; /* Restaura a setinha natural do HTML */
+  cursor: pointer !important;
+  padding: 10px 0;
+  outline: none;
+  user-select: none; /* Evita que o texto fique selecionado ao clicar */
+}
+
+/* Garante que o navegador permita cliques dentro da seção de destaque */
+.destaque, details, summary {
+  pointer-events: auto !important; 
+}
