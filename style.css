@@ -1,32 +1,31 @@
 /* ===== RESET BÁSICO — não precisa mexer ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte do texto (se a primeira não existir, tenta a próxima) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
   line-height: 1.6; 
-  background-color: #f9f9f9; /* Define a cor de fundo da página (um cinza bem claro) */
+  background-color: #f9f9f9; 
   color: #333;
 }
 
-/* ===== Modificado para dar maior impacto no meu trabalho ===== */
-
+/* ===== CABEÇALHO ===== */
 header {
-  background: linear-gradient(135deg, #3b3b3b 0%, #1a1a1a 100%); /* Gradiente tom Industrial */
+  background: linear-gradient(135deg, #3b3b3b 0%, #1a1a1a 100%); 
   color: #ffffff;
   padding: 100px 20px;
   text-align: center;
-  border-bottom: 10px solid #ff3b00; /* Laranja ArcelorMittal */
+  border-bottom: 10px solid #ff3b00; 
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   position: relative;
   overflow: hidden;
 }
 
 header h1 {
-  font-size: 3.5rem; /* Define um tamanho de letra bem grande para o título principal */
+  font-size: 3.5rem; 
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  text-shadow: 2px 4px 8px rgba(0,0,0,0.5); /* Sombra no texto */
+  text-shadow: 2px 4px 8px rgba(0,0,0,0.5); 
   line-height: 1.1;
 }
 
@@ -39,24 +38,53 @@ header p {
   letter-spacing: 0.5px;
 }
 
-/* Centraliza o conteúdo na tela e limita a largura máxima para facilitar a leitura */
+/* ===== NOVO: ESTILO DOS QUATRO BOTÕES LARANJAS DA NAVEGAÇÃO ===== */
+.container-botoes-nav {
+  text-align: center;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-nav {
+  background-color: #ff3b00;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.btn-nav:hover {
+  transform: scale(1.03);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
-  max-width: 850px; /* Largura ideal para leitura */
+  max-width: 850px; 
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-/* Ajusta a foto para ocupar a tela toda, fixa a altura e arredonda os cantos */
+/* Ajusta a foto para ocupar a tela toda */
 img {
-  width: 100%; /* Faz a imagem ocupar 100% da largura do elemento pai (main) */
-  height: 450px;
+  width: 100%; 
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 12px; /* Arredonda os cantos da imagem */
+  border-radius: 12px; 
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   margin-bottom: 40px;
+  display: block;
 }
 
-/* Caixa branca com uma borda grossa laranja no lado esquerdo */
+/* Caixa branca com uma borda grossa laranja */
 .destaque {
   background: #ffffff;
   padding: 40px;
@@ -66,43 +94,63 @@ img {
   margin-bottom: 50px;
 }
 
-/* Título interno do bloco de destaque (cor cinza escuro) */
 .destaque h2 {
   color: #3b3b3b;
   margin-bottom: 20px;
   font-size: 1.8rem;
 }
 
-/* Título das outras seções (cor laranja) */
 section h2 {
   color: #ff3b00;
   margin-bottom: 15px;
 }
 
-/* Tag de Lista: Organiza o grupo de itens e empurra o conteúdo de baixo */
 ul {
   list-style-position: inside;
   margin-bottom: 30px;
 }
 
-/* Itens da Lista: Linhas individuais com um espaçamento e um tracejado embaixo */
 li {
   padding: 10px 0;
   border-bottom: 1px dashed #ddd;
 }
 
-/* Fundo cinza claro no final da página com texto centralizado */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.9rem;
-  color: #666;
-  background: #eee;
-  margin-top: 50px;
+/* ===== NOVO: RESTAURAÇÃO COMPLETA DA TABELA BONITINHA ===== */
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto; /* Permite rolar lateralmente no celular se não couber */
+  margin-top: 10px;
 }
 
-/* ===== CARDS DE IMPACTO — ESTILO ADICIONAL ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
 
+thead tr {
+  background-color: #3b3b3b;
+  color: white;
+  text-align: left;
+}
+
+th, td {
+  padding: 15px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== CARDS DE IMPACTO ===== */
 .impacto-numeros {
   display: flex;
   justify-content: space-around;
@@ -111,19 +159,20 @@ footer {
 }
 
 .card {
-  background: #3b3b3b; /* Cinza Industrial igual ao header */
+  backdrop-filter: blur(5px);
+  background: rgba(59, 59, 59, 0.95);
   color: white;
   padding: 30px;
   border-radius: 8px;
   text-align: center;
   flex: 1;
-  border-bottom: 5px solid #ff3b00; /* Laranja ArcelorMittal */
+  border-bottom: 5px solid #ff3b00; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+  transition: transform 0.3s ease; 
 }
 
 .card:hover {
-  transform: translateY(-5px); /* O card sobe levemente */
+  transform: translateY(-5px); 
 }
 
 .card h3 {
@@ -139,18 +188,27 @@ footer {
   letter-spacing: 1px;
 }
 
-/* Efeito de Animação ao carregar a página */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ===== CHAMADA FINAL E BOTÃO SAIBA MAIS ===== */
+.chamada-final {
+  text-align: center; 
+  padding: 60px 20px; 
+  background: #3b3b3b; 
+  color: white; 
+  border-radius: 12px; 
+  margin-top: 40px; 
+  border-bottom: 8px solid #ff3b00;
 }
 
-/* Aplica o efeito de surgir suavemente (fadeIn) assim que a página carrega */
-body {
-  animation: fadeIn 1s ease-out;
+.chamada-final h2 {
+  color: #ff3b00;
+  margin-bottom: 10px;
 }
 
-/* Transforma um link comum em um botão laranja arredondado */
+.chamada-final p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
 .btn-saiba-mais {
   display: inline-block;
   padding: 15px 30px;
@@ -160,26 +218,70 @@ body {
   font-weight: bold;
   border-radius: 50px;
   transition: all 0.3s ease;
-  margin-top: 20px;
   box-shadow: 0 4px 15px rgba(255, 59, 0, 0.3);
 }
 
-.btn-saiba-mais:hover { /* Muda o botão para cinza e aumenta ele de tamanho ao passar o mouse */
+.btn-saiba-mais:hover { 
   background-color: #3b3b3b;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Melhora nos Cards (Efeito de Vidro) */
-.card {
-  backdrop-filter: blur(5px);
-  background: rgba(59, 59, 59, 0.95) !important;
+/* ===== Fundo cinza claro no final da página ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  background: #eee;
+  margin-top: 50px;
 }
 
-/* Garante que a foto da usina se ajuste ao tamanho de qualquer monitor */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Centraliza a foto na tela se ela for menor que o monitor */
+/* Efeito de Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+/* ========================================================
+   REGRAS EXCLUSIVAS PARA O CELULAR (Telas de até 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px;
+  }
+
+  header h1 {
+    font-size: 2.2rem; /* Reduz título gigante apenas no mobile */
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  /* Faz os 3 cards cinzas empilharem na vertical no celular */
+  .impacto-numeros {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  /* Faz os 4 botões de cima quebrarem em lista para não amontoar */
+  .container-botoes-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-nav {
+    width: 100%;
+    max-width: 280px;
+  }
 }
