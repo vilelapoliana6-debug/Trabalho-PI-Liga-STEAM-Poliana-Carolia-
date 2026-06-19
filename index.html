@@ -3,72 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!-- ========================================================
-NÍVEL 1 — CARTAZ DIGITAL
-Liga STEAM / ArcelorMittal
-========================================================
-Esta é a vara. Você pesca.
-
-O QUE FAZER:
-1. Troque o título da aba (tag <title> abaixo)
-2. Pense no recorte do tema (água? aço verde? reciclagem? energia?)
-3. Vá descendo o arquivo e preenchendo cada bloco marcado com TODO
-
-======================================================== --> 
-
   <title>O Futuro da Indústria é Simbiótico</title>
-
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-   <!-- ========================================================
-
-CABEÇALHO — a primeira coisa que a pessoa vê
-
-======================================================== --> 
-
   <header>
-    
     <h1>O Futuro da Indústria é Simbiótico</h1>
     <p>Como a ArcelorMittal transforma subprodutos em valor através da Simbiose Industrial.</p>
   </header>
 
-  
- <!-- ========================================================
-
-Botoes para levar para outra pagina sobre os produtos
-
-======================================================== --> 
-
-  <div style="text-align: center; margin: 30px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-    <a href="escoria-alto-forno.html" style="background-color: #ff3b00; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Escória de Alto-Forno</a>
-    
-    <a href="gases-processo.html" style="background-color: #ff3b00; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Gases de Processo</a>
-    
-    <a href="escoria-aciaria.html" style="background-color: #ff3b00; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Escória de Aciaria</a>
-    
-    <a href="lamas-aciaria.html" style="background-color: #ff3b00; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Lamas de Aciaria</a>
+  <div class="container-botoes-nav">
+    <a href="escoria-alto-forno.html" class="btn-nav">Escória de Alto-Forno</a>
+    <a href="gases-processo.html" class="btn-nav">Gases de Processo</a>
+    <a href="escoria-aciaria.html" class="btn-nav">Escória de Aciaria</a>
+    <a href="lamas-aciaria.html" class="btn-nav">Lamas de Aciaria</a>
   </div>
 
   <main>
-  </header>
-
- <!-- ========================================================
-
-CONTEÚDO PRINCIPAL
-
-======================================================== --> 
-
-  <main>
-   <img src="https://www.monlevadeemacao.com/wp-content/uploads/2025/02/arcelormittal-monlevade-5677.jpg" 
+    <img src="https://www.monlevadeemacao.com/wp-content/uploads/2025/02/arcelormittal-monlevade-5677.jpg" 
          alt="Fotografia de uma grande planta industrial siderúrgica com chaminés, tubulações complexas e estruturas metálicas sob um céu claro, representando a infraestrutura da ArcelorMittal." 
          title="Usina da ArcelorMittal João Monlevade (MG) - Polo de inovação e práticas de Simbiose Industrial na produção de aço." 
-         style="margin-bottom: 30px; display: block; width: 100%;">
-    <section class="destaque">
+         class="imagem-principal">
 
+    <section class="destaque">
       <h2>Transformando Resíduos em Riqueza</h2>
       <p>
         A simbiose industrial na ArcelorMittal consolida-se como uma solução estratégica para a sustentabilidade global. A utilização da escória de alto-forno como matéria-prima para a indústria de cimento exemplifica esse ciclo, reduzindo a necessidade de extração de recursos naturais e mitigando a emissão de gases de efeito estufa.
@@ -103,13 +61,7 @@ CONTEÚDO PRINCIPAL
       </div>
     </section>
 
-<!-- ========================================================
-
-criaNDO de uma lista detalhada de pilares sustentáveis
-
-======================================================== --> 
-
-    <section style="margin-bottom: 50px;">
+    <section class="secao-pilares">
       <h2>Pilares da Eficiência Circular</h2>
       <ul>
         <li><strong>Gestão Hídrica Avançada:</strong> Uso pioneiro de plantas de dessalinização de água do mar para preservar os recursos hídricos locais da comunidade.</li>
@@ -119,69 +71,52 @@ criaNDO de uma lista detalhada de pilares sustentáveis
       </ul>
     </section>
 
-    <section style="margin-bottom: 50px;">
+    <section class="secao-tabela">
       <h2>A Matriz da Simbiose: Resíduo vs. Aplicação</h2>
-      <p style="margin-bottom: 20px;">Veja abaixo como os subprodutos da fabricação do aço deixam de ser poluição e ganham nova utilidade no mercado regional:</p>
+      <p>Veja abaixo como os subprodutos da fabricação do aço deixam de ser poluição e ganham nova utilidade no mercado regional:</p>
       
-<!-- ========================================================
-
-RADE em 3 colunas, mostrando A relação de Simbiose Industrial:
-
-======================================================== -->
-
-      <table style="width: 100%; border-collapse: collapse; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
-        <thead>
-          <tr style="background-color: #3b3b3b; color: white; text-align: left;">
-            <th style="padding: 15px;">Subproduto Gerado</th>
-            <th style="padding: 15px;">Setor Parceiro</th>
-            <th style="padding: 15px;">Novo Produto Gerado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background-color: #fff; border-bottom: 1px solid #ddd;">
-            <td style="padding: 15px;"><strong>Escória de Alto-Forno</strong></td>
-            <td style="padding: 15px;">Indústria de Cimento</td>
-            <td style="padding: 15px;">Cimento Ecológico de alta resistência</td>
-          </tr>
-          <tr style="background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
-            <td style="padding: 15px;"><strong>Gases de Processo</strong></td>
-            <td style="padding: 15px;">Setor Energético Interno</td>
-            <td style="padding: 15px;">Energia Elétrica (Cogeração)</td>
-          </tr>
-          <tr style="background-color: #fff; border-bottom: 1px solid #ddd;">
-            <td style="padding: 15px;"><strong>Escória de Aciaria</strong></td>
-            <td style="padding: 15px;">Infraestrutura e Rodovias</td>
-            <td style="padding: 15px;">Base para pavimentação de estradas (Asfalto)</td>
-          </tr>
-          <tr style="background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
-            <td style="padding: 15px;"><strong>Lamas de Aciaria</strong></td>
-            <td style="padding: 15px;">Setor de Cerâmica</td>
-            <td style="padding: 15px;">Fabricação de tijolos e telhas argilosas</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="tabela-responsiva">
+        <table>
+          <thead>
+            <tr>
+              <th>Subproduto Gerado</th>
+              <th>Setor Parceiro</th>
+              <th>Novo Produto Gerado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Escória de Alto-Forno</strong></td>
+              <td>Indústria de Cimento</td>
+              <td>Cimento Ecológico de alta resistência</td>
+            </tr>
+            <tr>
+              <td><strong>Gases de Processo</strong></td>
+              <td>Setor Energético Interno</td>
+              <td>Energia Elétrica (Cogeração)</td>
+            </tr>
+            <tr>
+              <td><strong>Escória de Aciaria</strong></td>
+              <td>Infraestrutura e Rodovias</td>
+              <td>Base para pavimentação de estradas (Asfalto)</td>
+            </tr>
+            <tr>
+              <td><strong>Lamas de Aciaria</strong></td>
+              <td>Setor de Cerâmica</td>
+              <td>Fabricação de tijolos e telhas argilosas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
- <!-- ========================================================
-
-final da paina e link externo
-
-======================================================== --> 
-
-
-    <section style="text-align: center; padding: 60px 20px; background: #3b3b3b; color: white; border-radius: 12px; margin-top: 40px; border-bottom: 8px solid #ff3b00;">
-      <h2 style="color: #ff3b00;">Quer entender a Simbiose Industrial na prática?</h2>
-      <p style="color: #ccc; margin-top: 10px;">Explore as iniciativas da Liga STEAM e veja como a engenharia e o aço estão construindo um futuro verde.</p>
+    <section class="chamada-final">
+      <h2>Quer entender a Simbiose Industrial na prática?</h2>
+      <p>Explore as iniciativas da Liga STEAM e veja como a engenharia e o aço estão construindo um futuro verde.</p>
       <a href="https://brasil.arcelormittal.com.br/" target="_blank" class="btn-saiba-mais">Conhecer Projetos da ArcelorMittal</a>
     </section>
 
   </main>
-
- <!-- ========================================================
-
-RODAPÉ
-
-======================================================== --> 
 
   <footer>
     <p>
